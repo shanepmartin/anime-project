@@ -1,4 +1,3 @@
-# Cartoon.create(name: 'hi', description: 'hi', link1: 'hi', link2: 'hi', link3: 'hi', image: 'hi')
 puts "creating Cartoon..."
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 lucy_daughter_of_the_devil = Cartoon.create(name: "Lucy Daughter of the Devil", description: "21 year-old Lucy battles demonic daddy issues by dating DJ Jesus", link1: "https://www.luxubu.review/v/8g9z66-38yv", link2: "https://www.luxubu.review/v/yj417ueenem12dy", link3: "https://www.luxubu.review/v/zyvnzz73q8v", image: "https://upload.wikimedia.org/wikipedia/en/b/b6/Lucy%2C_the_Daughter_of_the_Devil.jpg")

@@ -7,8 +7,6 @@ class CreateCartoons < ActiveRecord::Migration[7.0]
       t.string :link2
       t.string :link3
       t.string :image
-
-      t.timestamps
     end
   end
 end

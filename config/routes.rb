@@ -1,19 +1,13 @@
 Rails.application.routes.draw do
 
-  # get, post, patch, delete
+  resources :cartoons, only: [:index, :show, :create, :update, :destroy]
 
-  get '/cartoons', to: 'cartoons#index'
+  resources :games, only: [:index, :show, :create, :update, :destroy]
 
-  get '/games', to: 'games#index'
+  resources :quotes, only: [:index, :show, :create, :update, :destroy]
 
-  get '/quotes', to: 'quotes#index'
-
-  get '/cartoons/:id', to: 'cartoons#show'
-
-  get '/games/:id', to: 'games#show'
-
-  get '/quotes/:id', to: 'quotes#show'
 
 end
+
 
 

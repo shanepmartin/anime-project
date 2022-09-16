@@ -18,8 +18,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_16_014636) do
     t.string "link2"
     t.string "link3"
     t.string "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "games", force: :cascade do |t|
@@ -27,15 +25,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_16_014636) do
     t.string "description"
     t.string "link"
     t.string "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "quotes", force: :cascade do |t|
     t.string "quote"
     t.string "link"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

@@ -1,49 +1,37 @@
 class QuotesController < ApplicationController
+    skip_before_action :verify_authenticity_token
     def index
-        render json: Quote.all
-    end
+        @quotes = Quote.all 
+        render json: @quotes
+    end 
 
     def show
-        render json: Quote.find(params[:id])
-    end
-
-    def new
-        render json: Quote.new
-    end
+        @quote = Quote.find(params[:id])
+        render json: @quote
+    end 
 
     def create
-        quote = Quote.new(quote_params)
-
-        if quote.save
-            redirect_to @quote
-        else
-            render :new, status: :unprocessable_entity
-        end
-    end
-
-    def edit 
-        @quote = Quote.find(params[:id])
-    end
+        quote = Quote.create(
+            quote: params[:quote],
+            link: params[:link]
+        )
+        render json: quote
+    end 
 
     def update
         @quote = Quote.find(params[:id])
+        @quote.update(
+            quote: params[:quote],
+            link: params[:link]
+        )
+        render json: @quote
+    end 
 
-        if @quote.update(quote_params)
-            redirect_to @quote
-        else
-            render :edit, status: :unprocessable_entity
-        end
-    end
-
-    def destroy 
+    def destroy
+        @quotes = Quote.all 
         @quote = Quote.find(params[:id])
         @quote.destroy
+        render json: @quotes
+    end 
 
-        redirect_to root_path, status: :see_other
-    end
-
-    private
-        def quote_params
-            params.require(:quote).permit(:title, :body)
-        end
 end

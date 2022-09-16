@@ -1,49 +1,42 @@
 class GamesController < ApplicationController
+
     def index
-        render json: Game.all
-    end
+        @games = Game.all 
+        render json: @games
+    end 
 
     def show
-        render json: Game.find(params[:id])
-    end
-
-    def new
-        render json: Game.new
-    end
+        @game = Game.find(params[:id])
+        render json: @game
+    end 
 
     def create
-        game = Game.new(game_params)
-
-        if game.save
-            redirect_to @game
-        else
-            render :new, status: :unprocessable_entity
-        end
-    end
-
-    def edit 
-        @game = Game.find(params[:id])
-    end
+        @game = Game.create(
+            name: params[:name],
+            description: params[:description],
+            link: params[:link],
+            image: params[:image]
+        )
+        render json: @game
+    end 
 
     def update
         @game = Game.find(params[:id])
+        @game.update(
+            name: params[:name],
+            description: params[:description],
+            link: params[:link],
+            image: params[:image]
+        )
+        render json: @game
+    end 
 
-        if @game.update(game_params)
-            redirect_to @game
-        else
-            render :edit, status: :unprocessable_entity
-        end
-    end
-
-    def destroy 
+    def destroy
+        @games = Game.all 
         @game = Game.find(params[:id])
         @game.destroy
+        render json: @games
+    end 
 
-        redirect_to root_path, status: :see_other
-    end
-
-    private
-        def game_params
-            params.require(:game).permit(:title, :body)
-        end
 end
+    
