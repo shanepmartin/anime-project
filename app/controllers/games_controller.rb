@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-
+    skip_before_action :verify_authenticity_token
     def index
         @games = Game.all 
         render json: @games
@@ -35,7 +35,7 @@ class GamesController < ApplicationController
         @games = Game.all 
         @game = Game.find(params[:id])
         @game.destroy
-        render json: @games
+        render json: @game
     end 
 
 end

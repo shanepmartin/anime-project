@@ -15,7 +15,7 @@ class QuotesController < ApplicationController
             quote: params[:quote],
             link: params[:link]
         )
-        render json: quote
+        render json: @quote
     end 
 
     def update
@@ -31,7 +31,7 @@ class QuotesController < ApplicationController
         @quotes = Quote.all 
         @quote = Quote.find(params[:id])
         @quote.destroy
-        render json: @quotes
+        render json: @quote
     end 
 
 end

@@ -1,5 +1,7 @@
 puts "creating Cartoon..."
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
 lucy_daughter_of_the_devil = Cartoon.create(name: "Lucy Daughter of the Devil", description: "21 year-old Lucy battles demonic daddy issues by dating DJ Jesus", link1: "https://www.luxubu.review/v/8g9z66-38yv", link2: "https://www.luxubu.review/v/yj417ueenem12dy", link3: "https://www.luxubu.review/v/zyvnzz73q8v", image: "https://upload.wikimedia.org/wikipedia/en/b/b6/Lucy%2C_the_Daughter_of_the_Devil.jpg")
 
 xavier_renegade_angel = Cartoon.create(name: "Xavier Renegade Angel", description: "a show about delusions of grandeur", link1: "https://www.luxubu.review/v/4lo00188yxo", link2: "https://www.luxubu.review/v/yx93kq88zqo", link3: "https://www.luxubu.review/v/zyvnz7ppr8v", image: "https://m.media-amazon.com/images/M/MV5BNGQ5NzQ1NzEtZTFkNy00ZDUzLWIxODktNDY5ZjFlNGJiYmQzXkEyXkFqcGdeQXVyMjMwNjYyMzE@._V1_QL75_UY281_CR4,0,190,281_.jpg")
@@ -12,7 +14,9 @@ stone_quackers = Cartoon.create(name: "Stone Quackers", description: "she wore b
 
 
 puts "creating Game..."
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
 wholesome_cats = Game.create(name: "Wholesome Cats", description: "oh so wholesome!", link: "https://v6p9d9t4.ssl.hwcdn.net/html/1071128/WebBuild/index.html?v=1542781917", image: "https://img.itch.zone/aW1hZ2UvMzA3MTk2LzE1MjExNDIuZ2lm/original/F95HsZ.gif")
 
 samurai_duck = Game.create(name: "Samurai Duck", description: "samurai quack!", link: "https://v6p9d9t4.ssl.hwcdn.net/html/6344503/WebGLBuild2.2/index.html", image: "https://img.itch.zone/aW1nLzc1NTE5MjIucG5n/315x250%23c/PFn22L.png")
@@ -55,7 +59,9 @@ nimbo = Game.create(name: "Nimbo", description: "be a magician!", link: "https:/
 
 
 puts "creating Quote..."
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
 last_meal = Quote.create(quote: "last meal", link: "https://static.bumpworthy.com/bumps/8739.d.mp4")
 
 social_media_reruns = Quote.create(quote: "social media reruns", link: "https://static.bumpworthy.com/bumps/8722.d.mp4")
@@ -94,4 +100,15 @@ pumpkins = Quote.create(quote: "pumpkins :)", link: "https://static.bumpworthy.c
 
 beautiful_swears = Quote.create(quote: "beautiful swears", link: "https://static.bumpworthy.com/bumps/4055.d.mp4")
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 
+puts "creating users..."
+
+# admin = User.create(name: "admin", password: "password", cartoon_favs: cartoon_favs, game_favs: game_favs, quote_favs: quote_favs)
+
+
+sky = User.create(name: "sky", password: "css")
+
+shane = User.create(name: "shane", password: "ruby")
+
+admin = User.create(name: "admin", password: "password")
