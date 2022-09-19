@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     end 
 
     def create
-        user = User.create(
+        @user = User.create(
             name: params[:name],
             password: params[:password]
         )
